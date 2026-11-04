@@ -1,7 +1,5 @@
 # Maya Torres: Web Design Portfolio
 
-> **Note for instructors:** This is a model README for a fictional student. The "draft feedback" in the revisions section is illustrative, so students should write about the real feedback they received. The live link below is a placeholder.
-
 **Live site:** https://dz-campus.github.io/webdev/
 
 A three-page personal portfolio made for my web design course. It has a home page, a work page with a project filter, and an about page with a contact form.
@@ -9,7 +7,7 @@ A three-page personal portfolio made for my web design course. It has a home pag
 ## Pages and file structure
 
 ```text
-portfolio/
+webdev/
 ├── index.html          Home
 ├── work.html           Projects, with a filter
 ├── about.html          About me and a contact form
