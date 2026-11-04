@@ -1,0 +1,439 @@
+/* ==========================================================
+   Maya Torres portfolio: shared styles for all three pages
+   ========================================================== */
+
+/* ---------- Color palette and spacing (change colors here) ---------- */
+:root {
+  --color-ink: #1f2933;
+  --color-muted: #52606d;
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-primary: #1d4e89;
+  --color-primary-dark: #143a69;
+  --color-primary-tint: #e8eef7;
+  --color-accent: #b45309;
+  --color-border: #cfd8e3;
+  --color-error: #b00020;
+  --color-success: #1b6e3a;
+  --radius: 8px;
+  --gap: 1.5rem;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.section-intro {
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+}
+
+.lead {
+  font-size: 1.15rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  background-color: var(--color-primary-dark);
+  border-radius: var(--radius);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- Header and navigation ---------- */
+.site-header {
+  background-color: var(--color-surface);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.site-name {
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-primary-dark);
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 0.6rem 0.25rem;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-list a:hover {
+  border-bottom-color: var(--color-border);
+}
+
+.nav-list a[aria-current="page"] {
+  font-weight: bold;
+  color: var(--color-primary-dark);
+  border-bottom-color: var(--color-accent);
+}
+
+/* ---------- Hero (home page) ---------- */
+.hero {
+  display: grid;
+  gap: var(--gap);
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 14rem;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ---------- Buttons ---------- */
+.button,
+.filter-button {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.button-secondary {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.button-secondary:hover {
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-tint);
+  border-color: var(--color-primary-dark);
+}
+
+/* ---------- Cards ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 1.25rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+}
+
+.card p {
+  margin-bottom: 0.75rem;
+}
+
+.card .tag-row {
+  margin-bottom: 0;
+}
+
+.learned {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-tint);
+  border-radius: 999px;
+}
+
+/* ---------- Work page: filter buttons ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.filter-button {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.filter-button:hover {
+  background-color: var(--color-primary-tint);
+}
+
+.filter-button[aria-pressed="true"] {
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+.filter-status {
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+}
+
+/* ---------- About page ---------- */
+.about-intro {
+  display: grid;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  max-width: 14rem;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  max-width: 36rem;
+  padding: 1.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: bold;
+}
+
+.field input,
+.field textarea {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-ink);
+  background-color: #ffffff;
+  border: 2px solid var(--color-muted);
+  border-radius: var(--radius);
+}
+
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+  border-color: var(--color-error);
+  background-color: #fdf2f4;
+}
+
+.hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.error {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--color-error);
+}
+
+.error:empty {
+  display: none;
+}
+
+.form-summary {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  color: var(--color-error);
+  background-color: #fdf2f4;
+  border-left: 4px solid var(--color-error);
+}
+
+.form-success {
+  margin: 1.25rem 0 0;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  color: var(--color-success);
+  background-color: #eef8f1;
+  border-left: 4px solid var(--color-success);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0 1rem;
+  color: var(--color-muted);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- Larger screens ---------- */
+@media (min-width: 48em) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero {
+    grid-template-columns: 1.4fr 1fr;
+    padding-top: 3rem;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .about-image {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 3rem;
+  }
+}
