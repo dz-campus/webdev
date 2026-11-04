@@ -2,7 +2,7 @@
 
 > **Note for instructors:** This is a model README for a fictional student. The "draft feedback" in the revisions section is illustrative, so students should write about the real feedback they received. The live link below is a placeholder.
 
-**Live site:** https://YOUR-USERNAME.github.io/portfolio/
+**Live site:** https://dz-campus.github.io/portfolio/
 
 A three-page personal portfolio made for my web design course. It has a home page, a work page with a project filter, and an about page with a contact form.
 
