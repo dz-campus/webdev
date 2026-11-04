@@ -9,7 +9,7 @@ A three-page personal portfolio made for my web design course. It has a home pag
 ## Pages and file structure
 
 ```text
-portfolio/
+webdev/
 ├── index.html          Home
 ├── work.html           Projects, with a filter
 ├── about.html          About me and a contact form
