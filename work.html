@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work | Maya Torres</title>
+  <meta name="description" content="Six web design projects by Maya Torres, filterable by HTML and CSS, JavaScript, or accessibility.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="index.html">Maya Torres</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html" aria-current="page">Work</a></li>
+          <li><a href="about.html">About &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container section page-intro" aria-labelledby="work-heading">
+      <h1 id="work-heading">My work</h1>
+      <p class="lead">Six projects from my first year. Pick a topic to show only the projects that match it.</p>
+    </section>
+
+    <section class="container section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <div class="filter-bar" role="group" aria-label="Filter projects by topic">
+        <button type="button" class="filter-button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-button" data-filter="html-css" aria-pressed="false">HTML &amp; CSS</button>
+        <button type="button" class="filter-button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+        <button type="button" class="filter-button" data-filter="accessibility" aria-pressed="false">Accessibility</button>
+      </div>
+      <p id="filter-status" class="filter-status" role="status">Showing all 6 projects</p>
+
+      <ul class="card-grid project-grid">
+        <li class="card project-card" data-category="html-css">
+          <h3>Campus Health Club page</h3>
+          <p>A responsive page for an online fitness club. I used semantic HTML, a shared color palette, and Flexbox to lay out the event cards.</p>
+          <p class="learned"><strong>What I learned:</strong> a small set of consistent colors makes a page look planned.</p>
+          <p class="tag-row"><span class="tag">HTML</span> <span class="tag">CSS</span> <span class="tag">Flexbox</span></p>
+        </li>
+        <li class="card project-card" data-category="html-css">
+          <h3>Recipe card grid</h3>
+          <p>A set of recipe cards that moves from one column on a phone to three on a desktop, using CSS Grid and one media query.</p>
+          <p class="learned"><strong>What I learned:</strong> auto-fit columns can replace several media queries.</p>
+          <p class="tag-row"><span class="tag">CSS Grid</span> <span class="tag">Responsive</span></p>
+        </li>
+        <li class="card project-card" data-category="accessibility">
+          <h3>Accessibility audit</h3>
+          <p>I scanned a club page with WAVE and fixed missing alt text, unlabeled form fields, low contrast, an empty button, a missing language, a skipped heading, and vague link text.</p>
+          <p class="learned"><strong>What I learned:</strong> most barriers come from small gaps in the HTML.</p>
+          <p class="tag-row"><span class="tag">WAVE</span> <span class="tag">Alt text</span> <span class="tag">Labels</span></p>
+        </li>
+        <li class="card project-card" data-category="accessibility">
+          <h3>Keyboard-friendly menu</h3>
+          <p>A navigation menu that works with only the Tab, Enter, and Escape keys, with a clear focus outline on every link.</p>
+          <p class="learned"><strong>What I learned:</strong> a visible focus style helps every keyboard user.</p>
+          <p class="tag-row"><span class="tag">Keyboard</span> <span class="tag">Focus</span></p>
+        </li>
+        <li class="card project-card" data-category="javascript">
+          <h3>Quiz timer</h3>
+          <p>A ten-question quiz with a countdown clock. JavaScript updates the score and moves to the next question without reloading the page.</p>
+          <p class="learned"><strong>What I learned:</strong> small functions are easier to test than one long script.</p>
+          <p class="tag-row"><span class="tag">JavaScript</span> <span class="tag">DOM</span></p>
+        </li>
+        <li class="card project-card" data-category="javascript">
+          <h3>Tip calculator</h3>
+          <p>A form that works out a tip and a split bill. It checks the numbers and shows a helpful message when something is missing.</p>
+          <p class="learned"><strong>What I learned:</strong> a clear error message tells people how to fix the problem.</p>
+          <p class="tag-row"><span class="tag">JavaScript</span> <span class="tag">Forms</span></p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Maya Torres. This is a model portfolio made for course use.</p>
+    </div>
+  </footer>
+
+  <script src="js/filter.js"></script>
+</body>
+</html>
